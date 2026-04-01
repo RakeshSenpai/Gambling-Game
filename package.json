@@ -1,0 +1,23 @@
+{
+  "name": "gambling-game",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/RakeshSenpai/Gambling-Game#readme",
+  "bugs": {
+    "url": "https://github.com/RakeshSenpai/Gambling-Game/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RakeshSenpai/Gambling-Game.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
