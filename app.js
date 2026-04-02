@@ -81,13 +81,12 @@ const spin = ()=> {
             reelsSymbols.splice(randomIndex, 1)
         }
     }
-    return reels
+    return reels;
 
 }
-const spinWheel = spin()
-console.log(spinWheel)
-
 const balance = diposit()
 const numberOfLines = getNumberOfLine()
 const bet = gerBet(balance, numberOfLines)
 console.log(bet)
+const spinWheel = spin()
+console.log(spinWheel) 
