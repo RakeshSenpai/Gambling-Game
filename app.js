@@ -69,9 +69,23 @@ const spin = ()=> {
             symbols.push(symbol )
         }
     }
-    console.log(symbols)
+
+    const reels = [[], [], []]
+    
+    for(let i = 0 ; i < COLUMNS; i++){
+        const reelsSymbols = [...symbols]
+        for(let j = 0; j < ROWS; j++){
+            const randomIndex = Math.floor(Math.random() * reelsSymbols.length)
+            const selectedSymbols = reelsSymbols[randomIndex]
+            reels[i].push(selectedSymbols)
+            reelsSymbols.splice(randomIndex, 1)
+        }
+    }
+    return reels
+
 }
-spin()
+const spinWheel = spin()
+console.log(spinWheel)
 
 const balance = diposit()
 const numberOfLines = getNumberOfLine()
