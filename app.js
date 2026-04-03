@@ -116,4 +116,3 @@ console.log(bet)
 const reels = spin()
 const rows = transpose(reels)
 printRows(rows)
-
