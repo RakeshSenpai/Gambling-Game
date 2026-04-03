@@ -120,7 +120,11 @@ const getWinnings = (rows, bet, lines) => {
                 break; 
             }
         }
+        if(winnings){
+            winnings += bet * SYMBOL_VALUES[symbols[0]]
+        }
     }
+    return winnings
 }
 
 const balance = diposit()
@@ -130,3 +134,5 @@ console.log(bet)
 const reels = spin()
 const rows = transpose(reels)
 printRows(rows)
+const winnings = getWinnings(rows, bet, numberOfLines)
+console.log("You won $ " + winnings)
