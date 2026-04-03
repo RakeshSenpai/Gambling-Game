@@ -84,9 +84,24 @@ const spin = ()=> {
     return reels;
 
 }
+
+const transpose = (reels) => {
+    const rows = [];
+    for(let i = 0 ; i < ROWS; i++){
+        rows.push([])
+        for(let j = 0 ; j < COLUMNS; j++){
+            rows[i].push(reels[j][i])
+        }
+    }
+    return rows
+}
+
+
 const balance = diposit()
 const numberOfLines = getNumberOfLine()
 const bet = gerBet(balance, numberOfLines)
 console.log(bet)
-const spinWheel = spin()
-console.log(spinWheel) 
+const reels = spin()
+const row = transpose(reels)
+console.log(row)
+
