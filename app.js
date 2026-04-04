@@ -126,13 +126,36 @@ const getWinnings = (rows, bet, lines) => {
     }
     return winnings
 }
+const game = () => {
+    const balance = diposit()
+    while (true){
+        console.log('You have balance of $ ' + balance)
+        
+    const numberOfLines = getNumberOfLine()
 
-const balance = diposit()
-const numberOfLines = getNumberOfLine()
-const bet = gerBet(balance, numberOfLines)
-console.log(bet)
-const reels = spin()
-const rows = transpose(reels)
-printRows(rows)
-const winnings = getWinnings(rows, bet, numberOfLines)
-console.log("You won $ " + winnings.toString())
+    const bet = gerBet(balance, numberOfLines)
+
+        balance -= bet * numberOfLines
+
+    console.log(bet)
+    const reels = spin()
+    const rows = transpose(reels)
+    printRows(rows)
+    const winnings = getWinnings(rows, bet, numberOfLines)
+
+    balance += winnings;
+
+    console.log("You won $ " + winnings.toString())     
+
+
+    if(balance <= 0){
+        console.log('You have ranout of money!')
+        break;
+    }
+
+    const playAgain = prompt('Do you want to play again (y/n)?')
+    if(playAgain != 'y') break;
+    }
+   
+}
+game()
