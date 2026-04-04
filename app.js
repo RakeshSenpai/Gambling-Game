@@ -25,6 +25,8 @@ const SYMBOL_VALUES = {
     D: 2
 }
 
+
+
 const diposit = () => {
     while(true){
     const dipositAmount = prompt('Enter your ammount')
@@ -36,6 +38,9 @@ const diposit = () => {
     }
     }
 }
+
+
+
 
 const getNumberOfLine = () => {
     while(true){
@@ -49,6 +54,8 @@ const getNumberOfLine = () => {
     }
 }
 
+
+
 function gerBet(balance, lines){
     while(true){
         const bet = prompt('Enter the bet per line:')
@@ -61,6 +68,8 @@ function gerBet(balance, lines){
         }
     }
 }
+
+
 
 const spin = ()=> {
     const symbols = []
@@ -85,6 +94,7 @@ const spin = ()=> {
 
 }
 
+
 const transpose = (reels) => {
     const rows = [];
     for(let i = 0 ; i < ROWS; i++){
@@ -95,6 +105,8 @@ const transpose = (reels) => {
     }
     return rows
 }
+
+
 
 const printRows = (rows) => {
     for(const row of rows){
@@ -108,6 +120,8 @@ const printRows = (rows) => {
         console.log(rowString)
     }
 }
+
+
 
 const getWinnings = (rows, bet, lines) => {
     let winnings = 0;
@@ -126,11 +140,14 @@ const getWinnings = (rows, bet, lines) => {
     }
     return winnings
 }
+
+
+
 const game = () => {
-    const balance = diposit()
+    let balance = diposit()
     while (true){
         console.log('You have balance of $ ' + balance)
-        
+
     const numberOfLines = getNumberOfLine()
 
     const bet = gerBet(balance, numberOfLines)
