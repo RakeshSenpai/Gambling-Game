@@ -175,4 +175,5 @@ const game = () => {
     }
    
 }
+console.log('jhgjhvhjv')
 game()
