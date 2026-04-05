@@ -175,10 +175,4 @@ const game = () => {
     }
    
 }
-console.log('jhgjhvhjv')
-console.log('jhgjhvhjv')
-console.log('jhgjhvhjv')
-console.log('jhgjhvhjv')
-console.log('jhgjhvhjv')
-console.log('jhgjhvhjv')
 game()
