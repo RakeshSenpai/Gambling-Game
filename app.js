@@ -1,4 +1,4 @@
-// Steps
+// Steps --->
 // 1. Deposit some money
 //2. Determine numbers of line to be bet on
 // 3. Collect a bet ammount
